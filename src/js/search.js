@@ -9,10 +9,10 @@ export default class Search {
 async getResult() {
    
     const id = '385fe752';
+    // https://forkify-api.herokuapp.com/api/search?q=pizza
     
-    const proxy2 = 'https://crossorigin.me/';
     try {
-        const res = await axios(`${proxy}https://api.spoonacular.com/recipes/search?query=${this.query}&number=30&apiKey=${key}`);
+        const res = await axios(`https://api.spoonacular.com/recipes/search?query=${this.query}&number=30&apiKey=${key}`);
         this.result = res.data.results;
         console.log(this.result);
    

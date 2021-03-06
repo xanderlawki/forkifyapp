@@ -5,10 +5,10 @@ export default class Recipe {
     constructor(id) {
         this.id = id;
     }
-
+   
     async getRecipe() {
         try {
-            const res = await axios(`${proxy}https://api.spoonacular.com/recipes/${this.id}/information?apiKey=${key}`);
+            const res = await axios(`https://api.spoonacular.com/recipes/${this.id}/information?apiKey=${key}`);
             console.log(res.data);
             this.title = res.data.title;
             this.img = res.data.image;
